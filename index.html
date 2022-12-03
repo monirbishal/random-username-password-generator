@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="input-area">
+            <label for="user"><h2>User Name</h2></label>
+            <input type="text" id="user">
+            <div class="controls">
+                <div class="input-group">
+                    <input type="checkbox" value="UP" id="userUpperCase">
+                    <label for="userUpperCase">Upper Case</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" value="LP" id="userLowerCase" checked>
+                    <label for="userLowerCase">Lower Case</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" value="NU" id="userNumber">
+                    <label for="userNumber">Number</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" value="SP" id="userSpecialCharacter">
+                    <label for="userSpecialCharacter">Special Character</label>
+                </div>
+
+                <div class="range">
+                    <input type="range" id="userRange" min="0" max="30" value="20" oninput="range('userRange')">
+                    <span id="userRange-value">20</span>
+                </div>
+            </div>
+        </div>
+        <!-- End: user name -->
+        <div class="input-area">
+            <label for="pass"><h2>Password</h2></label>
+            <input type="text" id="pass">
+            <div class="controls">
+                <div class="input-group">
+                    <input type="checkbox" value="UP" id="passUpperCase" checked>
+                    <label for="passUpperCase">Upper Case</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" value="LP" id="passLowerCase" checked>
+                    <label for="passLowerCase">Lower Case</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" value="NU" id="passNumber" checked>
+                    <label for="passNumber">Number</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" value="SP" id="passSpecialCharacter" checked>
+                    <label for="passSpecialCharacter">Special Character</label>
+                </div>
+
+                <div class="range">
+                    <input type="range" id="passRange" min="0" oninput="range('passRange')" max="30" value="20">
+                    <span id="passRange-value">20</span>
+                </div>
+            </div>
+        </div>
+        <!-- End: password -->
+
+        <div class="button-area">
+            <button id="userAndPassGenerate" onclick="generate()">Generate Random Username and Password</button>
+            <button id="copyUser" onclick="copy('user')">Copy Username</button>
+            <button id="copyPass" onclick="copy('pass')">Copy Password</button>
+        </div>
+        <!-- End: Button area -->
+
+        <div class="special-formet-area">
+            <p>both together</p>
+            <input type="text" id="specialFormetInput" placeholder="username:password:" disabled>
+            <button id="copySpecialFormet" onclick="copy('specialFormetInput')">Copy</button>
+        </div>
+        <!-- End: special-formet area -->
+    </div>
+
+    <!-- script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
